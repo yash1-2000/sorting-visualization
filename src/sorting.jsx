@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from "react";
-import { Arraycontext, Speedcontext, Disablecontext } from "./context/contexts";
+import React, { useContext } from "react";
+import { Arraycontext, Speedcontext } from "./context/contexts";
 import "./App.css";
 import Sliderbar from "./components/control.jsx";
 import { getMergeSortAnimations } from "./algorithms/mergsort.js";
@@ -8,13 +8,13 @@ import { demos } from "./algorithms/quicksort.js";
 import { insertion } from "./algorithms/insertionSort.js";
 
 export default function Sorting() {
-  const [disable, setdisable] = useContext(Disablecontext);
+  // const [disable, setdisable] = useContext(Disablecontext);
   const [array, setarray] = useContext(Arraycontext);
   const [speed, setspeed] = useContext(Speedcontext);
 
-  useEffect(() => {
-    console.log(disable);
-  }, [disable]);
+  // useEffect(() => {
+  //   console.log(disable);
+  // }, [disable]);
 
   function SpeedFunction() {
     return speed;
@@ -66,7 +66,7 @@ export default function Sorting() {
         setTimeout(() => {
           const [barOneIdx, newHeight] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
-          barOneStyle.height = `${newHeight / 2.5}px`;
+          barOneStyle.height = `${newHeight / 2.26}px`;
         }, i * newspeed);
       }
     }
@@ -94,8 +94,8 @@ export default function Sorting() {
         setTimeout(() => {
           const smallIdxStyle = arrayBars[largeIdx].style;
           const largeIdxStyle = arrayBars[smallIdx].style;
-          largeIdxStyle.height = `${smallHeight / 2.5}px`;
-          smallIdxStyle.height = `${largeHeight / 2.5}px`;
+          largeIdxStyle.height = `${smallHeight / 2.26}px`;
+          smallIdxStyle.height = `${largeHeight / 2.26}px`;
         }, i * newspeed);
       }
     } //totallength = animations.length;
@@ -127,8 +127,8 @@ export default function Sorting() {
         const leftStyle = arrayBars[leftIdx].style;
         const rightStyle = arrayBars[rightIdx].style;
         setTimeout(() => {
-          leftStyle.height = `${left / 2.5}px`;
-          rightStyle.height = `${right / 2.5}px`;
+          leftStyle.height = `${left / 2.26}px`;
+          rightStyle.height = `${right / 2.26}px`;
         }, i * newspeed);
       }
     }
@@ -154,8 +154,8 @@ export default function Sorting() {
         const leftStyle = arrayBars[leftIdx].style;
         const rightStyle = arrayBars[rightIdx].style;
         setTimeout(() => {
-          leftStyle.height = `${left / 2.5}px`;
-          rightStyle.height = `${right / 2.5}px`;
+          leftStyle.height = `${left / 2.26}px`;
+          rightStyle.height = `${right / 2.26}px`;
         }, i * newspeed);
       }
     }

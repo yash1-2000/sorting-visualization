@@ -3,7 +3,7 @@ import React, { useState, createContext } from "react";
 export const Arraycontext = createContext();
 export const Totalcontext = createContext();
 export const Speedcontext = createContext();
-export const Disablecontext = createContext();
+// export const Disablecontext = createContext();
 
 export function Arrayprovider(props) {
   const [array, setarray] = useState([]);
@@ -35,12 +35,12 @@ export function Speedprovider(props) {
   );
 }
 
-export function Disableprovider(props) {
-  const [disable, setdisable] = useState(true);
+// export function Disableprovider(props) {
+//   const [disable, setdisable] = useState(true);
 
-  return (
-    <Disablecontext.Provider value={[disable, setdisable]}>
-      {props.children}
-    </Disablecontext.Provider>
-  );
-}
+//   return (
+//     <Disablecontext.Provider value={[disable, setdisable]}>
+//       {props.children}
+//     </Disablecontext.Provider>
+//   );
+// }

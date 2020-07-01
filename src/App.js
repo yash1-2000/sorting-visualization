@@ -4,13 +4,13 @@ import {
   Totalprovider,
   Arrayprovider,
   Speedprovider,
-  Disableprovider,
+  // Disableprovider,
 } from "./context/contexts";
 
 function App() {
   return (
     <div>
-      <Disableprovider>
+      {/* <Disableprovider> */}
         <Totalprovider>
           <Speedprovider>
             
@@ -20,7 +20,7 @@ function App() {
            
           </Speedprovider>
         </Totalprovider>
-        </Disableprovider>
+        {/* </Disableprovider> */}
       
     </div>
   );
