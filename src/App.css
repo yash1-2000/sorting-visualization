@@ -20,7 +20,7 @@ body {
 }
 .bars {
   display: inline-block;
-  background-color: rgb(158, 239, 255);
+  background-color: rgb(238, 0, 103);
   /* width: max-content; */
   align-self: flex-end;
   /* margin-bottom: 20px; */
